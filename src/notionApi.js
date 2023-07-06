@@ -15,10 +15,6 @@ const useFetchProjectData = () => {
             filter: {},
          })
          console.log(response)
-         return {
-            status: 200,
-            body: response.results,
-         }
          setProjects(response)
       } catch (err) {
          console.log(err)
