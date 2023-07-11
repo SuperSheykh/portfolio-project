@@ -3,9 +3,11 @@ import { createContext, useState, useContext } from 'react'
 const AppContext = createContext()
 
 const AppContextProvider = ({ children }) => {
-   const [someValue, setSomeValue] = useState('value')
+   const [isNavOpen, setIsNavOpen] = useState(false)
+
+   const toggleNavButton = () => setIsNavOpen(!isNavOpen)
    return (
-      <AppContext.Provider value={{ someValue }}>
+      <AppContext.Provider value={{ isNavOpen, toggleNavButton }}>
          {children}
       </AppContext.Provider>
    )

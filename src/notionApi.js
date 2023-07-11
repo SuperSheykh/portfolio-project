@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Client } from '@notionhq/client'
 
+// const { Client } = require('@notionhq/client')
+
 const notionClient = new Client({
    auth: import.meta.env.VITE_API_KEY,
 })
