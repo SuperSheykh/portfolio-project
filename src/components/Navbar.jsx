@@ -38,6 +38,10 @@ const Wrapper = styled.section`
       transition: all 200ms ease;
    }
 
+   .activeContact {
+      border-color: var(--text-dark-accent);
+   }
+
    @media screen and (min-width: 670px) {
       .nav-icon {
          display: none;
@@ -116,6 +120,7 @@ const ModalWrapper = styled.div`
       border-top-left-radius: 30px;
       border-bottom-left-radius: 30px;
    }
+
    @media screen and (min-width: 670px) {
       display: none;
    }
@@ -222,7 +227,12 @@ const Navbar = () => {
                   Blog
                </NavLink>
             </div>
-            <NavLink to='/contact' className='nav-btn'>
+            <NavLink
+               to='/contact'
+               className={({ isActive }) =>
+                  isActive ? 'nav-btn activeContact' : 'nav-btn'
+               }
+            >
                Contact
             </NavLink>
             <NavLink className='nav-icon' onClick={toggleNavButton}>

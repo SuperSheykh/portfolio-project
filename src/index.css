@@ -98,23 +98,28 @@ body {
 }
 
 /* PROJECT HEADING AND TYPO */
+
 h1 {
-   font-size: 72px;
-   line-height: 80px;
-   letter-spacing: -2px;
-   font-weight: 800;
-}
-h2 {
    font-size: 56px;
    line-height: 64px;
    letter-spacing: -1px;
    font-weight: 800;
+   text-transform: capitalize;
+   margin: 0.5em 0;
 }
+
+h2 {
+   font-size: 40px;
+   line-height: 48px;
+   font-weight: 800;
+}
+
 h3 {
    font-size: 40px;
    line-height: 48px;
    font-weight: 800;
 }
+
 h4 {
    font-size: 24px;
    line-height: 32px;
@@ -124,39 +129,17 @@ h5 {
    color: var(--text-dark-accent);
    font-size: 16px;
    line-height: 32px;
+   text-transform: uppercase;
 }
 label {
    text-transform: uppercase;
    font-size: 12px;
    font-weight: 700;
 }
-.big-text {
-   font-size: 20px;
-   line-height: 32px;
-}
-p,
-.text {
+p {
    font-size: 16px;
    line-height: 32px;
 }
-.text-gray {
-   color: var(--text-dark-gray);
-}
-.small-text {
-   font-size: 14px;
-   line-height: 24px;
-   color: var(--text-light-gray);
-}
-
-.input {
-   border-radius: var(--input-border-radius);
-   width: 16.875rem;
-   height: 3rem;
-   font-size: 1rem;
-   color: var(--text-dark-gray);
-   border: 1px solid #f3d1bf;
-}
-
 .btn-secondary {
    background-color: white;
    box-shadow: 0px 3px 9px 0px rgba(57, 20, 0, 0.08);
@@ -170,23 +153,15 @@ p,
    /* display: none; */
 }
 
-@media (prefers) {
-   :root {
-      --backgroundColor: #333333;
-      --textColor: var(--text-light);
+@media screen and (min-width: 670px) {
+   h1 {
+      font-size: 72px;
+      line-height: 80px;
+      letter-spacing: -2px;
    }
-
-   .text-gray,
-   .small-text {
-      color: var(--text-light-gray);
-   }
-   .input {
-      background-color: var(--text-light);
-   }
-   .btn {
-      background-color: #b550f8;
-   }
-   .btn-secondary {
-      border: 1px solid var(--text-light-gray);
+   h2 {
+      font-size: 56px;
+      line-height: 64px;
+      letter-spacing: -1px;
    }
 }

@@ -3,15 +3,17 @@ import Hero from '../components/Hero'
 import Container from '../components/styled/Container'
 import { styled } from 'styled-components'
 
-import Section from '../components/styled/MySection'
+import Section from '../components/styled/Section'
 import { LearnMoreButton } from '../components/styled/Buttons'
 import Services from '../components/HomeServices'
+import HomePortfolio from '../components/HomePortfolio'
 
 const Home = () => {
    return (
       <>
          <Hero />
          <Services />
+         <HomePortfolio />
       </>
    )
 }

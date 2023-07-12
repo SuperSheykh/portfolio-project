@@ -1,9 +1,11 @@
 import { styled } from 'styled-components'
-import MySection from './styled/MySection'
+import MySection from './styled/Section'
 import Container from './styled/Container'
-import { LearnMoreButton } from './styled/Buttons'
+import { LearnMoreButton, LightPrimaryIcon } from './styled/Buttons'
 import React from 'react'
-import designIcon from '../assets/Oval1.svg'
+import { FaBuffer } from 'react-icons/fa'
+import { BiDevices } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
 const HeroServices = () => {
    const Section = styled(MySection)`
@@ -17,24 +19,53 @@ const HeroServices = () => {
          margin-block: 1em;
       }
       .services {
-         padding: 2em;
-         border: 1px solid red;
+         border: 1px solid #f3d1bf;
          border-radius: 5px;
-         display: grid;
-         grid-template-columns: 1fr;
-         gap: 2em;
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 2em;
       }
-      article {
+      .services article {
+         border-bottom: 1px solid #f3d1bf;
+         padding: 2em;
+      }
+      .services article:last-of-type {
+         border: none;
       }
       article > div {
          display: flex;
          align-items: center;
          gap: 2em;
       }
-      p {
+
+      article p {
          color: var(--text-dark-gray);
          margin-block: 2em;
          text-align: left;
+      }
+
+      p {
+         color: var(--text-dark-gray);
+      }
+
+      p a {
+         text-decoration: none;
+      }
+
+      p a:hover {
+         text-decoration: underline;
+      }
+
+      @media screen and (min-width: 670px) {
+         .services {
+            flex-direction: row;
+            flex-wrap: wrap;
+         }
+         .services article {
+            width: 50%;
+            border-bottom: none;
+            border-right: 1px solid #f3d1bf;
+         }
       }
    `
    return (
@@ -45,28 +76,37 @@ const HeroServices = () => {
             <div className='services'>
                <article>
                   <div>
-                     <img src={designIcon} alt='design icon' />
+                     <LightPrimaryIcon>
+                        <FaBuffer />
+                     </LightPrimaryIcon>
                      <h4>Design</h4>
                   </div>
                   <p>
                      Agency is a business you hire to outsource your digital
                      marketing efforts, instead of handling in-house.
                   </p>
-                  <LearnMoreButton />
+                  <LearnMoreButton to='/services' />
                </article>
-               <hr />
                <article>
                   <div>
-                     <img src={designIcon} alt='design icon' />
-                     <h4>Design</h4>
+                     <LightPrimaryIcon>
+                        <BiDevices />
+                     </LightPrimaryIcon>
+                     <h4>Developement</h4>
                   </div>
                   <p>
-                     Agency is a business you hire to outsource your digital
-                     marketing efforts, instead of handling in-house.
+                     Hire to outsource your digital marketing efforts, instead
+                     of handling in-house can provide your business.
                   </p>
                   <LearnMoreButton />
                </article>
             </div>
+            <p>
+               Want more service?{' '}
+               <Link to='/contact' style={{ color: '#391400' }}>
+                  Contact now
+               </Link>
+            </p>
          </Container>
       </Section>
    )
