@@ -4,14 +4,23 @@ const Section = styled.section`
    padding: 4rem 0;
 
    /* CLASS STYLING */
+   h5 {
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+   }
    .big-text {
       font-size: 20px;
       line-height: 32px;
+      color: var(--text-dark);
    }
    p,
    .text {
       font-size: 16px;
       line-height: 32px;
+   }
+   p {
+      color: var(--text-dark-gray);
    }
    .text-gray {
       color: var(--text-dark-gray);

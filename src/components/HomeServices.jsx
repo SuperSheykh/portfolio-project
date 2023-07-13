@@ -10,11 +10,7 @@ import { Link } from 'react-router-dom'
 const HeroServices = () => {
    const Section = styled(MySection)`
       text-align: center;
-      h5 {
-         font-weight: 400;
-         letter-spacing: 0.1em;
-         text-transform: uppercase;
-      }
+
       h2 {
          margin-block: 1em;
       }

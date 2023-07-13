@@ -7,6 +7,7 @@ import Section from '../components/styled/Section'
 import { LearnMoreButton } from '../components/styled/Buttons'
 import Services from '../components/HomeServices'
 import HomePortfolio from '../components/HomePortfolio'
+import HomeProf from '../components/HomeProf'
 
 const Home = () => {
    return (
@@ -14,6 +15,7 @@ const Home = () => {
          <Hero />
          <Services />
          <HomePortfolio />
+         <HomeProf />
       </>
    )
 }

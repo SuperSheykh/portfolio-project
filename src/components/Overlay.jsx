@@ -2,19 +2,20 @@ import React from 'react'
 import { styled } from 'styled-components'
 const Overlay = ({ img, text, title }) => {
    const Div = styled.div`
-      padding: 1rem;
-      .img-container {
-         padding: 3rem;
-         max-width: 100%;
-         height: 27rem;
-         display: flex;
-         flex-direction: column;
-         align-items: flex-start;
-         justify-content: flex-end;
-         border: 1px dashed green;
+      position: relative;
+      margin-bottom: 2em;
+      border-radius: 4px;
+      img {
+         opacity: 0.8;
+      }
+      .text-container {
+         padding: 0 2em;
+         position: absolute;
+         bottom: 3em;
+         text-transform: capitalize;
       }
       span {
-         padding: 0.25rem 0.5rem;
+         padding: 0.5rem 0.8rem;
          background-color: white;
          border-radius: 20px;
          color: var(--text-dark);
@@ -22,12 +23,18 @@ const Overlay = ({ img, text, title }) => {
       h3 {
          margin-top: 0.5em;
       }
+      @media screen and (min-width: 670px) {
+         flex: 1 0 30%;
+         min-width: 250px;
+         max-width: 45%;
+      }
    `
    return (
       <Div>
-         <div className='img-container'>
-            <span>Design</span>
-            <h3>SOFA</h3>
+         <img src={img} alt='some image' />
+         <div className='text-container'>
+            <span>{text}</span>
+            <h3>{title}</h3>
          </div>
       </Div>
    )
