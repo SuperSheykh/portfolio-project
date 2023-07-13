@@ -109,3 +109,7 @@ export const LightPrimaryIcon = styled.span`
    display: grid;
    place-content: center;
 `
+export const HomeProfCard = ({ icon, val, text }) => {
+   const Article = styled.article``
+   return <Article></Article>
+}
