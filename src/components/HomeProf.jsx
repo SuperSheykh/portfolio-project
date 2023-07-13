@@ -6,9 +6,6 @@ import { Button } from './styled/Buttons'
 import Container from './styled/Container'
 const HomeProf = () => {
    const Section = styled(StyledSection)`
-      img {
-         width: ;
-      }
       @media screen and (min-width: 670px) {
          .flex {
             display: flex;
