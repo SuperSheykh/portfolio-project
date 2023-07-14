@@ -6,6 +6,12 @@ import { Button } from './styled/Buttons'
 import Container from './styled/Container'
 const HomeProf = () => {
    const Section = styled(StyledSection)`
+      .text-part {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 1.25rem;
+      }
       @media screen and (min-width: 670px) {
          .flex {
             display: flex;
@@ -19,11 +25,11 @@ const HomeProf = () => {
       }
    `
    return (
-      <Section>
+      <Section className='grid'>
          <Container>
             <div className='flex'>
                <img src={pic} alt='some header pic' />
-               <div>
+               <div className='text-part'>
                   <h5>gabriel pires</h5>
                   <h3>Professional web designer</h3>
                   <p className='big-text'>Provides a full service range</p>

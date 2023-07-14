@@ -47,6 +47,14 @@ const Section = styled.section`
       h5 {
          color: var(--text-light-accent);
       }
+      p {
+         color: var(--text-light);
+      }
+   }
+   &.grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
    }
 `
 

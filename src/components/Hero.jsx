@@ -39,7 +39,7 @@ const HeroSection = styled(Section)`
 
 const Hero = () => {
    return (
-      <HeroSection>
+      <HeroSection className='dark'>
          <div className='hero-center'>
             <img src={heroPic} alt='Site title image' className='hero-img' />
             <div>
