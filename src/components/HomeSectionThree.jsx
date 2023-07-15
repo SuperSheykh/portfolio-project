@@ -1,9 +1,11 @@
 import React from 'react'
 import StyledSection from './styled/Section'
+import { StyledBorderCard } from './styled/Cards'
 import { styled } from 'styled-components'
 import pic from '../assets/pic.png'
-import { Button } from './styled/Buttons'
+import { Button, LightPrimaryIcon } from './styled/Buttons'
 import Container from './styled/Container'
+import { FaAd } from 'react-icons/fa'
 const HomeProf = () => {
    const Section = styled(StyledSection)`
       .text-part {
@@ -24,6 +26,17 @@ const HomeProf = () => {
          }
       }
    `
+   const CardContainer = styled(StyledBorderCard)`
+      article {
+         display: flex;
+         align-items: center;
+         gap: 2em;
+      }
+   `
+
+   const Icon = styled(LightPrimaryIcon)`
+      font-size: 30px;
+   `
    return (
       <Section className='grid'>
          <Container>
@@ -32,7 +45,7 @@ const HomeProf = () => {
                <div className='text-part'>
                   <h5>gabriel pires</h5>
                   <h3>Professional web designer</h3>
-                  <p className='big-text'>Provides a full service range</p>
+                  <p className='text-big'>Provides a full service range</p>
                   <p>
                      Ability to put themselves in the merchant's shoes. It is
                      meant to partner on the long run, and work as an extension
@@ -43,7 +56,28 @@ const HomeProf = () => {
                   </Button>
                </div>
             </div>
-            <div></div>
+            <div>
+               <CardContainer>
+                  <article>
+                     <Icon>
+                        <FaAd />
+                     </Icon>
+                     <div>
+                        <h3>42%</h3>
+                        <p className='text-big'>Years of experience</p>
+                     </div>
+                  </article>
+                  <article>
+                     <Icon>
+                        <FaAd />
+                     </Icon>
+                     <div>
+                        <h3>73+</h3>
+                        <p className='text-big'>Projects done</p>
+                     </div>
+                  </article>
+               </CardContainer>
+            </div>
          </Container>
       </Section>
    )

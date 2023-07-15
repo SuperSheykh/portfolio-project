@@ -9,7 +9,7 @@ const Section = styled.section`
       letter-spacing: 0.2em;
       text-transform: uppercase;
    }
-   .big-text {
+   .text-big {
       font-size: 20px;
       line-height: 32px;
       color: var(--text-dark);
@@ -29,6 +29,10 @@ const Section = styled.section`
       font-size: 14px;
       line-height: 24px;
       color: var(--text-light-gray);
+   }
+
+   img {
+      width: 100%;
    }
 
    .input {

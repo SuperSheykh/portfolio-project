@@ -1,6 +1,7 @@
 import { styled } from 'styled-components'
 import MySection from './styled/Section'
 import Container from './styled/Container'
+import { StyledBorderCard } from './styled/Cards'
 import { LearnMoreButton, LightPrimaryIcon } from './styled/Buttons'
 import React from 'react'
 import { FaBuffer } from 'react-icons/fa'
@@ -14,34 +15,16 @@ const HeroServices = () => {
       h2 {
          margin-block: 1em;
       }
-      .services {
-         border: 1px solid #f3d1bf;
-         border-radius: 5px;
-         display: flex;
-         flex-direction: column;
-         margin-bottom: 2em;
-      }
-      .services article {
-         border-bottom: 1px solid #f3d1bf;
-         padding: 2em;
-      }
-      .services article:last-of-type {
-         border: none;
-      }
+   `
+   const Card = styled(StyledBorderCard)`
       article > div {
          display: flex;
          align-items: center;
          gap: 2em;
       }
 
-      article p {
-         color: var(--text-dark-gray);
-         margin-block: 2em;
-         text-align: left;
-      }
-
       p {
-         color: var(--text-dark-gray);
+         margin-block: 2em;
       }
 
       p a {
@@ -51,25 +34,13 @@ const HeroServices = () => {
       p a:hover {
          text-decoration: underline;
       }
-
-      @media screen and (min-width: 670px) {
-         .services {
-            flex-direction: row;
-            flex-wrap: wrap;
-         }
-         .services article {
-            width: 50%;
-            border-bottom: none;
-            border-right: 1px solid #f3d1bf;
-         }
-      }
    `
    return (
       <Section>
          <Container>
             <h5>Services</h5>
             <h2>How can I help you with</h2>
-            <div className='services'>
+            <Card>
                <article>
                   <div>
                      <LightPrimaryIcon>
@@ -96,7 +67,7 @@ const HeroServices = () => {
                   </p>
                   <LearnMoreButton />
                </article>
-            </div>
+            </Card>
             <p>
                Want more service?{' '}
                <Link to='/contact' style={{ color: '#391400' }}>

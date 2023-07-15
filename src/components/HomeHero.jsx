@@ -12,9 +12,7 @@ const HeroSection = styled(Section)`
       max-width: var(--max-width);
       margin: 0 auto;
    }
-   .hero-img {
-      width: 100%;
-   }
+
    h4.person-name {
       color: var(--text-dark-accent);
    }

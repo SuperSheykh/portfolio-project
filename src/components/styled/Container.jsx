@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-// This container is responsible for general
+// This container is responsible for general layout.
 const Container = styled.div`
    width: var(--view-width);
    max-width: var(--max-width);
