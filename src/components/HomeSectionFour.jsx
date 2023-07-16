@@ -8,6 +8,9 @@ import { TiTick } from 'react-icons/ti'
 import pic5 from '../assets/pic5.png'
 import { StyledBorderCard } from './styled/Cards'
 import { FaStar } from 'react-icons/fa'
+import face1 from '../assets/face1.png'
+import face2 from '../assets/face2.png'
+import face3 from '../assets/face3.png'
 
 const HomeSectionFour = () => {
    const Section = styled(StyledSection)`
@@ -36,8 +39,17 @@ const HomeSectionFour = () => {
       background-color: #f9e5da;
    `
    const SectionThree = styled(StyledSection)`
+      text-align: center;
       .stars {
          color: #f6d021;
+      }
+      .testor {
+         display: flex;
+         align-items: center;
+         img {
+            max-width: 80px;
+            margin-right: 1em;
+         }
       }
    `
    return (
@@ -108,15 +120,60 @@ const HomeSectionFour = () => {
                         handling in-house. They can provide your business with a
                         variety.
                      </p>
-                     <div>
-                        <img src='' alt='' />
+                     <div className='testor'>
+                        <img src={face1} alt='' />
                         <div>
-                           <h4></h4>
-                           <p></p>
+                           <h4>Graham Griffiths</h4>
+                           <p>Twittor</p>
+                        </div>
+                     </div>
+                  </article>
+                  <article>
+                     <div className='stars'>
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                     </div>
+                     <p>
+                        A digital agency is a business you hire to outsource
+                        your digital marketing efforts, instead of handling
+                        in-house. They can provide your business with a variety
+                        of digital solutions.
+                     </p>
+                     <div className='testor'>
+                        <img src={face2} alt='' />
+                        <div>
+                           <h4>Alan Marti</h4>
+                           <p>Meta Inc.</p>
+                        </div>
+                     </div>
+                  </article>
+                  <article>
+                     <div className='stars'>
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                     </div>
+                     <p>
+                        Provide your business with a variety of digital
+                        solutions to promote your product or service online.
+                     </p>
+                     <div className='testor'>
+                        <img src={face3} alt='' />
+                        <div>
+                           <h4>Richardo Kann</h4>
+                           <p>Photogram</p>
                         </div>
                      </div>
                   </article>
                </StyledBorderCard>
+               <Button secondary to='/'>
+                  See all
+               </Button>
             </Container>
          </SectionThree>
       </>

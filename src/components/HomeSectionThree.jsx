@@ -19,6 +19,7 @@ const HomeProf = () => {
    const Icon = styled(LightPrimaryIcon)`
       font-size: 30px;
    `
+
    return (
       <Section className='grid'>
          <Container>
