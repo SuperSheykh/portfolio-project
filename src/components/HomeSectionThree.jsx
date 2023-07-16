@@ -5,27 +5,9 @@ import { styled } from 'styled-components'
 import pic from '../assets/pic.png'
 import { Button, LightPrimaryIcon } from './styled/Buttons'
 import Container from './styled/Container'
-import { FaAd } from 'react-icons/fa'
+import { FaNetworkWired, FaHouzz } from 'react-icons/fa'
 const HomeProf = () => {
-   const Section = styled(StyledSection)`
-      .text-part {
-         display: flex;
-         flex-direction: column;
-         align-items: flex-start;
-         gap: 1.25rem;
-      }
-      @media screen and (min-width: 670px) {
-         .flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2em;
-            & > * {
-               width: 45%;
-            }
-         }
-      }
-   `
+   const Section = styled(StyledSection)``
    const CardContainer = styled(StyledBorderCard)`
       article {
          display: flex;
@@ -42,7 +24,7 @@ const HomeProf = () => {
          <Container>
             <div className='flex'>
                <img src={pic} alt='some header pic' />
-               <div className='text-part'>
+               <div className='text'>
                   <h5>gabriel pires</h5>
                   <h3>Professional web designer</h3>
                   <p className='text-big'>Provides a full service range</p>
@@ -60,7 +42,7 @@ const HomeProf = () => {
                <CardContainer>
                   <article>
                      <Icon>
-                        <FaAd />
+                        <FaNetworkWired />
                      </Icon>
                      <div>
                         <h3>42%</h3>
@@ -69,7 +51,7 @@ const HomeProf = () => {
                   </article>
                   <article>
                      <Icon>
-                        <FaAd />
+                        <FaHouzz />
                      </Icon>
                      <div>
                         <h3>73+</h3>

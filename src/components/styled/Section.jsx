@@ -25,6 +25,9 @@ const Section = styled.section`
    .text-gray {
       color: var(--text-dark-gray);
    }
+   .text-light-gray {
+      color: #ffffff62;
+   }
    .small-text {
       font-size: 14px;
       line-height: 24px;
@@ -44,9 +47,13 @@ const Section = styled.section`
       border: 1px solid #f3d1bf;
    }
 
+   ul {
+      list-style: none;
+   }
+
    /* STYLING FOR DARK SECTIONS */
    &.dark {
-      background-color: #26262c;
+      background-color: var(--darkBackground);
       color: var(--text-light);
       h5 {
          color: var(--text-light-accent);
@@ -59,6 +66,24 @@ const Section = styled.section`
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
+   }
+
+   .text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+   }
+   @media screen and (min-width: 670px) {
+      .flex {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         gap: 2em;
+         & > * {
+            width: 45%;
+         }
+      }
    }
 `
 

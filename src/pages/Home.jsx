@@ -8,6 +8,7 @@ import { LearnMoreButton } from '../components/styled/Buttons'
 import Services from '../components/HomeSectionOne'
 import HomePortfolio from '../components/HomeSectionTwo'
 import HomeProf from '../components/HomeSectionThree'
+import HomeSectionFour from '../components/HomeSectionFour'
 
 const Home = () => {
    return (
@@ -16,6 +17,7 @@ const Home = () => {
          <Services />
          <HomePortfolio />
          <HomeProf />
+         <HomeSectionFour />
       </>
    )
 }

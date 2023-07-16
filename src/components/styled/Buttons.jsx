@@ -55,6 +55,20 @@ export const Button = styled(Link)`
                  color: white;
               `
       }}
+
+      ${({ primary }) => {
+         if (primary) {
+            return css`
+               background-color: var(--text-light-accent);
+               color: var(--my-fav-color);
+               &:hover {
+                  transform: scale(0.98);
+                  text-decoration: underline;
+                  color: #c3fac5;
+               }
+            `
+         }
+      }}
    }
 `
 

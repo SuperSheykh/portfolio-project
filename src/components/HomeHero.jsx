@@ -5,8 +5,6 @@ import { Button } from './styled/Buttons'
 import Section from './styled/Section'
 
 const HeroSection = styled(Section)`
-   background-color: var(--darkBackground);
-   color: white;
    .hero-center {
       width: var(--view-width);
       max-width: var(--max-width);
@@ -47,7 +45,9 @@ const Hero = () => {
                   Agency provides a full service range including technical
                   skills, design, business understanding.
                </p>
-               <Button to='/services'>See my work</Button>
+               <Button primary to='/services'>
+                  See my work
+               </Button>
             </div>
          </div>
       </HeroSection>
