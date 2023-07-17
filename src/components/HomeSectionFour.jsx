@@ -36,10 +36,18 @@ const HomeSectionFour = () => {
       font-size: 1em;
    `
    const SectionTwo = styled(StyledSection)`
-      background-color: #f9e5da;
+      background-color: #f9d4c0;
+      h4 {
+         max-width: 250px;
+      }
+      .flex > * {
+         width: 30%;
+      }
    `
    const SectionThree = styled(StyledSection)`
       text-align: center;
+      article {
+      }
       .stars {
          color: #f6d021;
       }
@@ -91,8 +99,7 @@ const HomeSectionFour = () => {
             <Container className='flex'>
                <div>
                   <h5>GET STARTED</h5>
-                  <h4>I help companies</h4>
-                  <h4>move faster</h4>
+                  <h4>I help companies move faster</h4>
                   <Button to='/contact'>contact me</Button>
                </div>
                <p>

@@ -21,11 +21,11 @@ const HomeProf = () => {
    `
 
    return (
-      <Section className='grid'>
+      <Section>
          <Container>
             <div className='flex'>
                <img src={pic} alt='some header pic' />
-               <div className='text'>
+               <div>
                   <h5>gabriel pires</h5>
                   <h3>Professional web designer</h3>
                   <p className='text-big'>Provides a full service range</p>

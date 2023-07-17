@@ -11,10 +11,6 @@ import { Link } from 'react-router-dom'
 const HeroServices = () => {
    const Section = styled(MySection)`
       text-align: center;
-
-      h2 {
-         margin-block: 1em;
-      }
    `
    const Card = styled(StyledBorderCard)`
       article > div {

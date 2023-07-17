@@ -4,6 +4,13 @@ const Section = styled.section`
    padding: 4rem 0;
 
    /* CLASS STYLING */
+   h1,
+   h2,
+   h3,
+   h4 {
+      margin-block: 0.5em;
+   }
+
    h5 {
       font-weight: 400;
       letter-spacing: 0.2em;
@@ -62,27 +69,12 @@ const Section = styled.section`
          color: var(--text-light);
       }
    }
-   &.grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-   }
-
-   .text {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.25rem;
-   }
    @media screen and (min-width: 670px) {
       .flex {
          display: flex;
          justify-content: space-between;
          align-items: center;
          gap: 2em;
-         & > * {
-            width: 45%;
-         }
       }
    }
 `

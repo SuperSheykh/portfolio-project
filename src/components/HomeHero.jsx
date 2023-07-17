@@ -2,31 +2,19 @@ import React from 'react'
 import { styled } from 'styled-components'
 import heroPic from '../assets/heroPic.png'
 import { Button } from './styled/Buttons'
-import Section from './styled/Section'
+import StyledSection from './styled/Section'
+import Container from './styled/Container'
 
-const HeroSection = styled(Section)`
-   .hero-center {
-      width: var(--view-width);
-      max-width: var(--max-width);
-      margin: 0 auto;
+const Section = styled(StyledSection)`
+   .flex {
+      flex-direction: row-reverse;
    }
 
-   h4.person-name {
+   h4 {
       color: var(--text-dark-accent);
-   }
-   .btn {
-      border: transparent;
-      margin: 0.85em 0;
    }
 
    @media screen and (min-width: 670px) {
-      .hero-center {
-         display: flex;
-         flex-direction: row-reverse;
-         align-items: center;
-         justify-content: center;
-         gap: 5%;
-      }
       .hero-img {
          max-width: 45%;
       }
@@ -35,8 +23,8 @@ const HeroSection = styled(Section)`
 
 const Hero = () => {
    return (
-      <HeroSection className='dark'>
-         <div className='hero-center'>
+      <Section className='dark'>
+         <Container className='flex'>
             <img src={heroPic} alt='Site title image' className='hero-img' />
             <div>
                <h4 className='person-name'>Gabriel Pires</h4>
@@ -49,8 +37,8 @@ const Hero = () => {
                   See my work
                </Button>
             </div>
-         </div>
-      </HeroSection>
+         </Container>
+      </Section>
    )
 }
 
