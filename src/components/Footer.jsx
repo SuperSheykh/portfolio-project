@@ -22,6 +22,7 @@ const Footer = () => {
          }
       }
       .text {
+         margin-top: 2em;
          width: 100%;
          text-align: center;
       }
