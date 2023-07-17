@@ -40,8 +40,10 @@ const HomeSectionFour = () => {
       h4 {
          max-width: 250px;
       }
-      .flex > * {
-         width: 30%;
+      @media screen and (mind-width: 670px) {
+         .flex > * {
+            width: 30%;
+         }
       }
    `
    const SectionThree = styled(StyledSection)`

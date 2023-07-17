@@ -30,6 +30,11 @@ const Footer = () => {
          color: #cacaca;
       }
 
+      .terms {
+         display: flex;
+         justify-content: space-between;
+      }
+
       @media screen and (min-width: 670px) {
          .flex {
             align-items: baseline;
@@ -48,6 +53,7 @@ const Footer = () => {
             padding-top: 2em;
             border: none;
             .text {
+               text-align: left;
                width: 400px;
                margin-right: auto;
             }
@@ -110,8 +116,10 @@ const Footer = () => {
          </Container>
          <Container className='flex copyright'>
             <p className='text'>Copyright 2023 Laqqiq. All rights reserved</p>
-            <Link>Terms of Use</Link>
-            <Link>Privacy policy</Link>
+            <div className='terms'>
+               <Link>Terms of Use</Link>
+               <Link>Privacy policy</Link>
+            </div>
          </Container>
       </Section>
    )
