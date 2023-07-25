@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import useFetchProjectData from './notionApi'
 import {
    Home,
    About,
@@ -11,10 +10,8 @@ import {
    Blog,
    Pricing,
 } from './pages'
-import GlobalStyles from './components/styled/global'
-const App = () => {
-   const { projects } = useFetchProjectData()
 
+const App = () => {
    const router = createBrowserRouter([
       {
          path: '/',
@@ -53,7 +50,6 @@ const App = () => {
 
    return (
       <main>
-         <GlobalStyles />
          <RouterProvider router={router} />
       </main>
    )

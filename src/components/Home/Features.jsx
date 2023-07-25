@@ -12,56 +12,7 @@ import face1 from '../assets/face1.png'
 import face2 from '../assets/face2.png'
 import face3 from '../assets/face3.png'
 
-const HomeSectionFour = () => {
-   const Section = styled(StyledSection)`
-      .flex {
-         @media screen and (min-width: 670px) {
-            flex-direction: row-reverse;
-            align-items: center;
-         }
-      }
-
-      ul {
-         li {
-            display: flex;
-            align-items: center;
-            margin: 1em 0;
-            p {
-               margin-left: 1em;
-            }
-         }
-      }
-   `
-   const Icon = styled(LightPrimaryIcon)`
-      font-size: 1em;
-   `
-   const SectionTwo = styled(StyledSection)`
-      background-color: #f9d4c0;
-      h4 {
-         max-width: 250px;
-      }
-      @media screen and (mind-width: 670px) {
-         .flex > * {
-            width: 30%;
-         }
-      }
-   `
-   const SectionThree = styled(StyledSection)`
-      text-align: center;
-      article {
-      }
-      .stars {
-         color: #f6d021;
-      }
-      .testor {
-         display: flex;
-         align-items: center;
-         img {
-            max-width: 80px;
-            margin-right: 1em;
-         }
-      }
-   `
+const Features = () => {
    return (
       <>
          <Section className='dark'>
@@ -189,4 +140,54 @@ const HomeSectionFour = () => {
    )
 }
 
-export default HomeSectionFour
+export default Features
+
+const Section = styled(StyledSection)`
+   .flex {
+      @media screen and (min-width: 670px) {
+         flex-direction: row-reverse;
+         align-items: center;
+      }
+   }
+
+   ul {
+      li {
+         display: flex;
+         align-items: center;
+         margin: 1em 0;
+         p {
+            margin-left: 1em;
+         }
+      }
+   }
+`
+const Icon = styled(LightPrimaryIcon)`
+   font-size: 1em;
+`
+const SectionTwo = styled(StyledSection)`
+   background-color: #f9d4c0;
+   h4 {
+      max-width: 250px;
+   }
+   @media screen and (mind-width: 670px) {
+      .flex > * {
+         width: 30%;
+      }
+   }
+`
+const SectionThree = styled(StyledSection)`
+   text-align: center;
+   article {
+   }
+   .stars {
+      color: #f6d021;
+   }
+   .testor {
+      display: flex;
+      align-items: center;
+      img {
+         max-width: 80px;
+         margin-right: 1em;
+      }
+   }
+`

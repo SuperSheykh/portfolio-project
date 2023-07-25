@@ -1,22 +1,16 @@
-const { Client } = require('@notionhq/client')
+import { Client } from '@notionhq/client'
 
-const { NOTION_KEY, NOTION_DB } = process.env
+const { NOTION_PORTFOLIO_KEY, NOTION_PROJECTS_DB } = process.env
 
 // Initializing a client
 const notion = new Client({
-   auth: NOTION_KEY,
+   auth: NOTION_PORTFOLIO_KEY,
 })
 
 exports.handler = async function (event, context) {
    try {
       const response = await notion.databases.query({
-         database_id: NOTION_DB,
-         filter: {
-            property: 'Status',
-            select: {
-               equals: 'Live',
-            },
-         },
+         database_id: NOTION_PROJECTS_DB,
       })
       return {
          statusCode: 200,

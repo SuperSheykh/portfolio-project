@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-export const StyledBorderCard = styled.div`
+const BorderCard = styled.div`
    border: 1px solid #f3d1bf;
    border-radius: 5px;
    display: flex;
@@ -27,3 +27,4 @@ export const StyledBorderCard = styled.div`
       }
    }
 `
+export default BorderCard

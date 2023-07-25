@@ -1,29 +1,11 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import heroPic from '../assets/heroPic.png'
-import { Button } from './styled/Buttons'
-import StyledSection from './styled/Section'
-import Container from './styled/Container'
-
-const Section = styled(StyledSection)`
-   .flex {
-      flex-direction: row-reverse;
-   }
-
-   h4 {
-      color: var(--text-dark-accent);
-   }
-
-   @media screen and (min-width: 670px) {
-      .hero-img {
-         max-width: 45%;
-      }
-   }
-`
+import { Button, Section, Container } from '../styled'
 
 const Hero = () => {
    return (
-      <Section className='dark'>
+      <Wrapper className='dark'>
          <Container className='flex'>
             <img src={heroPic} alt='Site title image' className='hero-img' />
             <div>
@@ -38,8 +20,24 @@ const Hero = () => {
                </Button>
             </div>
          </Container>
-      </Section>
+      </Wrapper>
    )
 }
 
 export default Hero
+
+const Wrapper = styled(Section)`
+   .flex {
+      flex-direction: row-reverse;
+   }
+
+   h4 {
+      color: var(--text-dark-accent);
+   }
+
+   @media screen and (min-width: 670px) {
+      .hero-img {
+         max-width: 45%;
+      }
+   }
+`

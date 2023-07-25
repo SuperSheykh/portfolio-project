@@ -1,12 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import StyledSection from './styled/Section'
-import Container from './styled/Container'
-import { LightPrimaryIcon } from './styled/Buttons'
+import { Section, Container, Icon } from '../styled'
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 import { styled } from 'styled-components'
 const Footer = () => {
-   const Section = styled(StyledSection)`
+   const Wrapper = styled(Section)`
       .footer-top {
          text-align: center;
          display: flex;
@@ -62,7 +60,7 @@ const Footer = () => {
       }
    `
    return (
-      <Section className='dark'>
+      <Wrapper className='dark'>
          <Container className='flex footer-top'>
             <h4>Personal</h4>
             <div>
@@ -99,19 +97,19 @@ const Footer = () => {
             </div>
             <div className='flex icons'>
                <a href='www.facebook.com' target='_blank'>
-                  <LightPrimaryIcon>
+                  <Icon>
                      <FaFacebook />
-                  </LightPrimaryIcon>
+                  </Icon>
                </a>
                <a href='www.twitter.com' target='_blank'>
-                  <LightPrimaryIcon>
+                  <Icon>
                      <FaTwitter />
-                  </LightPrimaryIcon>
+                  </Icon>
                </a>
                <a href='www.instagram.com' target='_blank'>
-                  <LightPrimaryIcon>
+                  <Icon>
                      <FaInstagram />
-                  </LightPrimaryIcon>
+                  </Icon>
                </a>
             </div>
          </Container>
@@ -122,7 +120,7 @@ const Footer = () => {
                <Link>Privacy policy</Link>
             </div>
          </Container>
-      </Section>
+      </Wrapper>
    )
 }
 

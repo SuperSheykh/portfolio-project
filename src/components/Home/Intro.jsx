@@ -1,23 +1,17 @@
 import React from 'react'
-import StyledSection from './styled/Section'
-import { StyledBorderCard } from './styled/Cards'
+import { Section, BorderCard, Container } from '../../styled'
 import { styled } from 'styled-components'
-import pic from '../assets/pic.png'
-import { Button, LightPrimaryIcon } from './styled/Buttons'
-import Container from './styled/Container'
+import pic from '../../assets/pic.png'
+import { Button, Icon } from '../../styled'
 import { FaNetworkWired, FaHouzz } from 'react-icons/fa'
-const HomeProf = () => {
-   const Section = styled(StyledSection)``
-   const CardContainer = styled(StyledBorderCard)`
+
+const Intro = () => {
+   const CardContainer = styled(BorderCard)`
       article {
          display: flex;
          align-items: center;
          gap: 2em;
       }
-   `
-
-   const Icon = styled(LightPrimaryIcon)`
-      font-size: 30px;
    `
 
    return (
@@ -66,4 +60,4 @@ const HomeProf = () => {
    )
 }
 
-export default HomeProf
+export default Intro
